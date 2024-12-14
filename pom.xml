@@ -14,8 +14,8 @@
     </modules>
 
     <scm>
-        <url>https://github.com/yuuma-kannagi/easy-word</url>
-        <connection>scm:git:https://github.com/yuuma-kannagi/easy-word.git</connection>
+        <url>https://github.com/Kannagi-Yuuma/easy-word.git</url>
+        <connection>scm:git:git@github.com:Kannagi-Yuuma/easy-word.git</connection>
     </scm>
 
     <developers>
@@ -25,6 +25,15 @@
             <email>1453839388@qq.com</email>
         </developer>
     </developers>
+    
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
 
     <properties>
         <project.version>1.0.2</project.version>
