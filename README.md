@@ -16,7 +16,11 @@
 
 
 #### 使用说明
-详见 [easy-word-demo](https://gitee.com/yuuma/easy-word-demo/src/master/src/main/java/com/yuuma/EasyWordDemo.java)
+详见 [easy-word-demo](https://github.com/Kannagi-Yuuma/easy-word/blob/main/easy-word-demo/src/main/java/com/yuuma/EasyWordDemo.java)
 
 #### 软件架构 
-jdk 1.8
+| 依赖项 | 版本 |
+| --- | --- |
+| JDK | 1.8 |
+| Apache POI | 5.2.5 |
+| Apache POI-ooxml | 5.2.5 |
