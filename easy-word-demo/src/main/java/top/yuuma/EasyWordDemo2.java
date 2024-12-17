@@ -1,4 +1,4 @@
-package com.yuuma;
+package top.yuuma;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -6,11 +6,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.yuuma.constants.PlaceholderRegexConstant;
-import com.yuuma.entity.EasyWordDocument;
-import com.yuuma.read.EasyWordReader;
-
 import lombok.extern.slf4j.Slf4j;
+import top.yuuma.constants.PlaceholderRegexConstant;
+import top.yuuma.entity.EasyWordDocument;
+import top.yuuma.read.EasyWordReader;
 
 @Slf4j
 public class EasyWordDemo2 {
@@ -25,7 +24,7 @@ public class EasyWordDemo2 {
 
         try (FileOutputStream out = new FileOutputStream("demo_template2_output.docx")) {
             // 读取Word文档
-            EasyWordDocument document = EasyWordReader.read("demo_template2.docx");
+            EasyWordDocument document = EasyWordReader.read("file/demo_template2.docx");
             // 替换占位符数据,使用{link PlaceholderRegexConstant#DOUBLE_BRACE}正则表达式匹配占位符
             document.write()
                     .replacePlaceholders(params, PlaceholderRegexConstant.DOUBLE_BRACE)

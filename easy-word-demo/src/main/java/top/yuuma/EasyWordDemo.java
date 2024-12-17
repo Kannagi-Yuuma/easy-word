@@ -1,14 +1,13 @@
-package com.yuuma;
-
-import com.yuuma.read.EasyWordReader;
+package top.yuuma;
 
 import lombok.extern.slf4j.Slf4j;
+import top.yuuma.entity.EasyWordDocument;
+import top.yuuma.read.EasyWordReader;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.io.FileOutputStream;
-import com.yuuma.entity.EasyWordDocument;
 import java.util.Date;
 
 /**

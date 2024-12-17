@@ -1,11 +1,12 @@
-package com.yuuma.read;
+package top.yuuma.read;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+
+import top.yuuma.entity.EasyWordDocument;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.FileNotFoundException;
-
-import com.yuuma.entity.EasyWordDocument;
 
 /**
  * Word文档读取工具类

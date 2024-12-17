@@ -4,13 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.yuuma</groupId>
+        <groupId>top.yuuma</groupId>
         <artifactId>easy-word-common</artifactId>
-        <version>${project.version}</version>
+        <version>1.0.4</version>
     </parent>
 
     <artifactId>easy-word-core</artifactId>
-    <version>${project.version}</version>
 
     <packaging>jar</packaging>
     

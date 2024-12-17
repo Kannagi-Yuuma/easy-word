@@ -1,11 +1,10 @@
-package com.yuuma.entity;
+package top.yuuma.entity;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
-import com.yuuma.write.EasyWordWriter;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import top.yuuma.write.EasyWordWriter;
 import lombok.AllArgsConstructor;
 
 /**

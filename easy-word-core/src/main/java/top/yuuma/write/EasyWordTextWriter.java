@@ -1,6 +1,9 @@
-package com.yuuma.write;
+package top.yuuma.write;
 
 import org.apache.poi.xwpf.usermodel.*;
+
+import top.yuuma.handler.RunsStyleHandler;
+
 import java.util.Map;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -42,34 +45,17 @@ public class EasyWordTextWriter {
      * @param params 替换参数
      */
     private void processParagraph(XWPFParagraph paragraph, Map<String, Object> params) {
-        // 获取段落中的所有运行块
         List<XWPFRun> runs = paragraph.getRuns();
         
-        // 收集所有文本
-        StringBuilder text = new StringBuilder();
+        // 逐个处理每个run
         for (XWPFRun run : runs) {
             String runText = run.getText(0);
             if (runText != null) {
-                text.append(runText);
-            }
-        }
-        
-        // 替换占位符
-        String newText = replacePlaceholders(text.toString(), params);
-        
-        // 如果文本发生变化，更新第一个运行块，删除其他运行块
-        if (!text.toString().equals(newText)) {
-            if (runs.size() > 0) {
-                XWPFRun firstRun = runs.get(0);
-                firstRun.setText(newText, 0);
-                // 删除其他运行块
-                for (int i = runs.size() - 1; i > 0; i--) {
-                    paragraph.removeRun(i);
+                String newText = replacePlaceholders(runText, params);
+                
+                if (!runText.equals(newText)) {
+                    RunsStyleHandler.preserveAndSetText(run, newText);
                 }
-            } else {
-                // 如果没有运行块，创建一个新的
-                XWPFRun run = paragraph.createRun();
-                run.setText(newText);
             }
         }
     }
