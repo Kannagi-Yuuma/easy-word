@@ -1,8 +1,8 @@
-package top.yuuma.read;
+package top.yuuma.word.read;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
-import top.yuuma.entity.EasyWordDocument;
+import top.yuuma.word.entity.EasyWordDocument;
 
 import java.io.IOException;
 import java.io.InputStream;

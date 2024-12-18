@@ -1,4 +1,4 @@
-package top.yuuma.constants;
+package top.yuuma.word.constants;
 
 /**
  * 占位符正则表达式常量类

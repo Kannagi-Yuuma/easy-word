@@ -1,8 +1,8 @@
-package top.yuuma;
+package top.yuuma.word;
 
 import lombok.extern.slf4j.Slf4j;
-import top.yuuma.entity.EasyWordDocument;
-import top.yuuma.read.EasyWordReader;
+import top.yuuma.word.entity.EasyWordDocument;
+import top.yuuma.word.read.EasyWordReader;
 
 import java.io.IOException;
 import java.util.HashMap;

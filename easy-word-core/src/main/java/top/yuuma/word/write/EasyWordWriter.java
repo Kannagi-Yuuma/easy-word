@@ -1,8 +1,8 @@
-package top.yuuma.write;
+package top.yuuma.word.write;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
-import top.yuuma.constants.PlaceholderRegexConstant;
+import top.yuuma.word.constants.PlaceholderRegexConstant;
 
 import java.util.Map;
 import java.io.OutputStream;

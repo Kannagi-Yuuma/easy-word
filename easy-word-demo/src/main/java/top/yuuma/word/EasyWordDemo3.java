@@ -1,4 +1,4 @@
-package top.yuuma;
+package top.yuuma.word;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lombok.extern.slf4j.Slf4j;
-import top.yuuma.entity.EasyWordDocument;
-import top.yuuma.read.EasyWordReader;
+import top.yuuma.word.entity.EasyWordDocument;
+import top.yuuma.word.read.EasyWordReader;
 
 @Slf4j
 public class EasyWordDemo3 {

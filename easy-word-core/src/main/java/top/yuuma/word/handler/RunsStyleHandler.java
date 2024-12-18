@@ -1,4 +1,4 @@
-package top.yuuma.handler;
+package top.yuuma.word.handler;
 
 import org.apache.poi.xwpf.usermodel.UnderlinePatterns;
 import org.apache.poi.xwpf.usermodel.XWPFRun;

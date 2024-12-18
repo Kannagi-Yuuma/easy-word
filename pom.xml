@@ -5,12 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>top.yuuma</groupId>
-    <artifactId>easy-word-common</artifactId>
-    <version>1.0.4</version>
+    <artifactId>easy-word-parent</artifactId>
+    <version>${revision}</version>
     <packaging>pom</packaging>
+    <name>easy-word-parent</name>
+    <description>easy tool for word</description>
+    <url>https://github.com/Kannagi-Yuuma/easy-word.git</url>
+
     <modules>
         <module>easy-word-demo</module>
         <module>easy-word-core</module>
+        <module>easy-word</module>
     </modules>
 
     <scm>
@@ -28,7 +33,7 @@
 
     <licenses>
         <license>
-            <name>Apache 2</name>
+            <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
             <comments>A business-friendly OSS license</comments>
@@ -36,6 +41,7 @@
     </licenses>
 
     <properties>
+        <revision>1.0.5</revision>
         <java.version>1.8</java.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -44,6 +50,21 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>top.yuuma</groupId>
+                <artifactId>easy-word-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.yuuma</groupId>
+                <artifactId>easy-word-demo</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.yuuma</groupId>
+                <artifactId>easy-word</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
@@ -60,44 +81,74 @@
                 <version>1.18.30</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- SLF4J API -->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>2.0.9</version>
-            </dependency>
-
-            <!-- Log4j2 依赖 -->
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>2.20.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>2.20.0</version>
-            </dependency>
-
-            <!-- SLF4J 到 Log4j2 的桥接 -->
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-slf4j2-impl</artifactId>
-                <version>2.20.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>easyexcel</artifactId>
-                <version>4.0.3</version>
-            </dependency>
+            
         </dependencies>
     </dependencyManagement>
 
     <build>
-        <plugins>
-            <!-- 在这里添加Maven插件 -->
-        </plugins>
+        <plugins></plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.4.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <tokenAuth>true</tokenAuth>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <configuration>
+                            <executable>C:\Program Files (x86)\GnuPG\bin\gpg.exe</executable>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <executions>
+                            <execution>
+                                <id>source-jar</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.5.0</version>
+                        <executions>
+                            <execution>
+                                <id>javadoc-jar</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

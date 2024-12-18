@@ -1,8 +1,8 @@
-package top.yuuma.write;
+package top.yuuma.word.write;
 
 import org.apache.poi.xwpf.usermodel.*;
 
-import top.yuuma.handler.RunsStyleHandler;
+import top.yuuma.word.handler.RunsStyleHandler;
 
 import java.util.Map;
 import java.util.List;

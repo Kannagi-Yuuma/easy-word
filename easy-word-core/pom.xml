@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>top.yuuma</groupId>
-        <artifactId>easy-word-common</artifactId>
-        <version>1.0.4</version>
+        <artifactId>easy-word-parent</artifactId>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>easy-word-core</artifactId>
