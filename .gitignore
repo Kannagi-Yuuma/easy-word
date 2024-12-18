@@ -31,3 +31,6 @@ hs_err_pid*
 # maven target
 target/
 **/target/
+
+# maven flatten
+**/.flattened-pom.xml
