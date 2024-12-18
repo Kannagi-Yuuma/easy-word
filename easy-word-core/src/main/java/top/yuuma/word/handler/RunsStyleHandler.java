@@ -24,7 +24,7 @@ public class RunsStyleHandler {
         
         // 字体相关
         String fontFamily = run.getFontFamily();
-        double fontSize = run.getFontSizeAsDouble();
+        Double fontSize = run.getFontSizeAsDouble();
         String color = run.getColor();
         
         // 设置新文本
@@ -42,7 +42,7 @@ public class RunsStyleHandler {
         if (fontFamily != null) {
             run.setFontFamily(fontFamily);
         }
-        if (fontSize != -1) {
+        if (fontSize != null && fontSize != -1) {
             run.setFontSize(fontSize);
         }
         if (color != null) {
