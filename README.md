@@ -16,7 +16,16 @@
 
 
 #### 使用说明
-详见 [easy-word-demo](https://github.com/Kannagi-Yuuma/easy-word/blob/main/easy-word-demo/src/main/java/com/yuuma/EasyWordDemo.java)
+依赖引入
+```xml
+<dependency>
+    <groupId>top.yuuma</groupId>
+    <artifactId>easy-word</artifactId>
+    <version>1.0.5</version>
+</dependency>
+```
+
+具体使用详见 [easy-word-demo](https://github.com/Kannagi-Yuuma/easy-word/blob/main/easy-word-demo/src/main/java/com/yuuma/EasyWordDemo.java)
 
 #### 软件架构 
 | 依赖项 | 版本 |
