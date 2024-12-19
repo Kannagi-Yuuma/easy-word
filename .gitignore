@@ -34,3 +34,6 @@ target/
 
 # maven flatten
 **/.flattened-pom.xml
+
+# 输出文件
+**/*_output.docx
